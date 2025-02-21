@@ -8,4 +8,3 @@ public class UserService {
         return "Hello from UserService!";
     }
 }
-
