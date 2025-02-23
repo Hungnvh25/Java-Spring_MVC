@@ -1,4 +1,4 @@
-package com.example.JavaSpringProject.controller;
+package com.example.JavaSpringProject.controller.admin;
 
 import java.util.List;
 
@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+
 
 import com.example.JavaSpringProject.domain.User;
 import com.example.JavaSpringProject.service.UserService;
@@ -34,7 +33,7 @@ public class UserController {
     public String getUserPage(Model model) {
         List<User> users = this.userService.getAllUsers();
         model.addAttribute("users", users);
-        return "admin/user/table-user";
+        return "admin/user/show";
     }
 
     @GetMapping("/admin/user/create")
@@ -53,7 +52,7 @@ public class UserController {
     public String getUserPage(Model model, @PathVariable long userId) {
         User user = this.userService.getUserById(userId);
         model.addAttribute("user", user);
-        return "/admin/user/show";
+        return "/admin/user/detail";
     }
 
     @GetMapping("/admin/user/update/{userId}")
