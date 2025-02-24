@@ -51,11 +51,13 @@
                                     <div class="mb-3 col-12 col-md-6">
                                         <label for="email" class="form-label">Email</label>
                                         <form:input type="email" class="form-control" path="email"/>
+                                        <form:errors path="email" cssClass="text-danger"/>
                                     </div>
                                 
                                     <div class="mb-3 col-12 col-md-6">
                                         <label for="password" class="form-label">Password</label>
                                         <form:input type="password" class="form-control" path="password"/>
+                                        <form:errors path="password" cssClass="text-danger"/>
                                     </div>
                                 
                                     <div class="mb-3 col-12 col-md-6">
@@ -66,6 +68,7 @@
                                     <div class="mb-3 col-12 col-md-6">
                                         <label for="fullName" class="form-label">Full Name:</label>
                                         <form:input type="text" class="form-control" path="fullName"/>
+                                        <form:errors path="fullName" cssClass="text-danger"/>
                                     </div>
                                 
                                     <div class="mb-3 col-12">

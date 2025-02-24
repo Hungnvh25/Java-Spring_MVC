@@ -22,6 +22,9 @@ public class UploadService {
     public String handleSaveUploatFile(MultipartFile file, String TagetForder) {
         String rootPath = this.servletContext.getRealPath("/resources/images");
         String fileName = "";
+        if(file.isEmpty()){
+            return "";
+        }
         try {
             byte[] bytes = file.getBytes(); // get
 
