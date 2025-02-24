@@ -31,12 +31,6 @@ public class UserController {
         this.uploadService = uploadService;
     }
 
-    @GetMapping("/")
-    public String getHomePage(Model model) {
-        List<User> users = this.userService.getAllUsersByEmail("2003nguyenvanhung7612119@gmail.com");
-        System.out.println(users);
-        return "hello";
-    }
 
     @GetMapping("/admin/user")
     public String getUserPage(Model model) {
